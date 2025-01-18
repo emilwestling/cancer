@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lung Cancer Detection</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <style>
+    .visualization {
+      display: flex; /* Ensures the images are aligned side by side */
+      gap: 10px;
+      /* width: 100%; */
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .visualization img {
+      max-width: calc(
+        50% - 5px
+      ); /* Each image takes up half the width minus half the gap */
+      height: auto; /* Maintain aspect ratio */
+    }
+  </style>
+  <body>
+    <!-- Menu Bar -->
+    <div class="menu-bar">
+      <a href="https://www.emilwestling.com/index.html">About Me</a>
+      <a href="https://www.emilwestling.com/portfolio.html">Portfolio</a>
+      <a href="https://www.emilwestling.com/resume.pdf" target="_blank"
+        >Resume</a
+      >
+    </div>
+    <header>
+      <h1>Cancer Detection</h1>
+    </header>
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#github">GitHub</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="container">
+      <section id="overview" class="section">
+        <h2>Overview</h2>
+        <p>
+          Lung cancer remains one of the deadliest diseases globally, and early
+          detection is critical in improving survival rates. In this project, I
+          worked on building a convolutional neural network (CNN) to classify
+          CT-scan images of lungs as either normal or cancerous. Implementing
+          such techniques in the healthcare industry has immense potential to
+          assist doctors in saving lives by streamlining diagnosis.
+        </p>
+        <p>
+          The datasets for this project are publicly available on
+          <a
+            class="link"
+            href="https://www.kaggle.com/datasets/faizankhan20cab105/lung-c"
+            >kaggle</a
+          >. Below are two example images from the dataset. The image on the
+          left shows a normal set of lungs, and the one on the right cancerous
+          lungs.
+        </p>
+        <div class="visualization">
+          <img src="images/normal.jpg" alt="Normal" />
+          <img src="images/Cancer.jpg" alt="Cancer" />
+        </div>
+
+        <p>
+          The primary objective of this project was to classify lung CT-scans
+          into two categories: normal and cancerous lungs. Additionally, I also
+          experimented with a more challenging dataset containing four classes,
+          which introduced additional variations and complexity.
+        </p>
+
+        <p>
+          I implemented a CNN model with the following architecture:
+
+          <ul>
+            <li>
+              Three convolutional layers: Responsible for extracting critical
+              features like patterns and edges from the images.
+            </li>
+            <li>
+              One max pooling layer: Used to reduce dimensionality while
+              preserving important features.
+            </li>
+            <li>
+              Two dense layers: These layers perform the final classification
+              based on the features extracted.
+            </li>
+          </ul>
+          This architecture was selected after extensive experimentation.
+          Interestingly, it outperformed more complex architectures, achieving
+          higher validation accuracies while maintaining efficiency.
+        </p>
+
+        <p>
+          For the two-class dataset (normal vs. cancerous), the model achieved a 
+          perfect 100% accuracy during validation. To make this result more 
+          practical, I developed a GUI where users can input a CT-scan image, and 
+          the trained model predicts whether the lungs are normal or cancerous.
+        </p>
+        <div class="visualization">
+          <video width="560" height="460" controls>
+            <source src="gui.mov" type="video/mp4" />
+            Your browser does not support HTML video.
+          </video>
+        </div>
+        <p>
+          The four-class dataset was more challenging due to the increased
+          complexity. The model achieved an accuracy of 84% during validation.
+          This opens avenues for future research and optimization.
+
+        <p></p>
+      </section>
+      <section id="github" class="section">
+        <h2>GitHub</h2>
+        <p>
+          The full code is available on my
+          <a
+            class="link"
+            href="https://github.com/emilwestling/cancer"
+            target="_blank"
+            >GitHub</a
+          >.
+        </p>
+      </section>
+      <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>
+          For more information or inquiries about this project, please contact
+          me at:
+          <br />
+          <a class="link" href="mailto:westling01@gmail.com"
+            >westling01@gmail.com</a
+          >.
+        </p>
+      </section>
+    </div>
+    <footer>
+      <p>&copy; 2025 Emil Westling. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

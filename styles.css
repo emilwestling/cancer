@@ -1,0 +1,77 @@
+body {
+    background-color: #201d1d;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    line-height: 1.7;
+    padding: 40px;
+    font-size: 18px;
+}
+header {
+    background-color: #201d1d;
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+header h1 {
+    margin: 0;
+}
+nav {
+    margin: 20px;
+    text-align: center;
+}
+nav a {
+    color: #aa7777;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.section {
+    margin-bottom: 40px;
+}
+.section h2 {
+    border-bottom: 2px solid #aa7777;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.link {
+    color: #64b5f6;
+}
+.visualization img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+}
+footer {
+    background-color: #1e1e1e;
+    padding: 10px 20px;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.menu-bar {
+    background-color: #201d1d; /* Dark background for the menu */
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.menu-bar a {
+    color: #ffffff; /* White text for menu items */
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+.menu-bar a:hover {
+    background-color: #333;
+    border-radius: 5px;
+}
